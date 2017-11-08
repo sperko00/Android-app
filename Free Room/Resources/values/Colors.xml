@@ -1,0 +1,17 @@
+﻿<resources>
+  <color name="material_dark_background">#424242</color>
+  <color name="window_background">#FFF5F5F5</color>
+  <color name="red">#ffff0000</color>
+  <color name="black">#000</color>
+  <color name="hint">#FFF</color>
+  <color name="base">#FFF</color>
+  <color name="highlight">#000</color>
+  <color name="search_blue" >#0288D1</color>
+  <color name="transparent">#00FFFFFF</color>
+  <color name="button_blue">#0288D1</color>
+  <color name="login_background">#03A9F4</color>
+  
+  <color name="colorPrimary">#009bdd</color>
+  <color name="colorPrimaryDark">#37474F</color>
+  <color name="colorAccent">#FFF</color>
+</resources>

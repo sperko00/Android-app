@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+<!-- CITY -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/city_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:ms_arrowColor="#0288D1"
+            app:ms_hintColor="#FFF"
+            app:ms_floatingLabelColor="#0288D1"
+            app:ms_floatingLabelText="@string/city_label"
+            app:ms_hint="@string/hint"
+            app:ms_arrowSize="10dp"
+            app:ms_multiline="true" />
+    </LinearLayout>
+
+<!--PRICE-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:orientation="horizontal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:text="Cijena"
+        android:textStyle="bold"
+        android:textColor="#FFF"
+        android:layout_gravity="center|center" />
+    <XpandItComponents.RangeSliderView
+        android:id="@+id/range_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/min_price"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/search_blue" />
+        <TextView
+            android:id="@+id/max_price"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/search_blue" />
+    </RelativeLayout>
+  
+<!--NEXT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:orientation="horizontal" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+        <TextView
+            android:text="Broj soba:"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:layout_weight="0.45"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_weight=".1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+      <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45">
+        <EditText
+            android:id="@+id/num_of_rooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Broj soba" />
+      </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:orientation="horizontal" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+        <TextView
+            android:text="Broj kreveta:"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:layout_weight="0.45"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_weight=".1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+      <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45">
+        <EditText
+            android:id="@+id/num_of_beds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Broj kreveta" />
+      </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <Button
+      android:id="@+id/search_btn"
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:layout_gravity="center"
+      android:text="PRETRAŽI"
+      android:theme="@style/ButtonStyle" />
+    <Button
+        android:id="@+id/remove_filters_button"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:text="PONIŠTI"
+        android:theme="@style/ButtonStyle" />
+  
+</LinearLayout>

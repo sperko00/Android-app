@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  
+  <style name="AppTheme" parent="Base.AppTheme">
+    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <item name="android:windowTranslucentStatus">true</item>
+  </style>
+  
+  <style name="ButtonStyle" parent="Widget.AppCompat.Button.Colored">
+    <item name="android:colorButtonNormal">@color/button_blue</item>
+  </style>
+</resources>

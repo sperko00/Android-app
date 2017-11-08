@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+  <string name="ApplicationName">Free Room</string>
+  <string name="hint">Odaberi grad</string>
+  <string name="city_label">Odabrani grad</string>
+  <string name="bottom_heading">SEARCH</string>
+  
+  <string-array name="city_array">
+    <item>Dubrovnik</item>
+    <item>Split</item>
+    <item>Zadar</item>
+    <item>Rijeka</item>
+    <item>Zagreb</item>
+    <item>Osijek</item>
+  </string-array>
+
+  <string name="myRooms">Moje sobe</string>
+  <string name="myRoomsPreview">Pregledaj</string>
+  <string name="myRoomsModify">Uredi</string>
+  
+  <string name="aptDataIme">Ime: </string>
+  <string name="aptDataImeHint">Ime apartmana</string>
+  <string name="aptDataAdresa">Adresa: </string>
+  <string name="aptDataAdresaHint">Odaberite adresu</string>
+  <string name="aptDataGrad">Grad: </string>
+  <string name="aptDataGradHint">Grad</string>
+  <string name="aptDataBrojKreveta">Broj kreveta: </string>
+  <string name="aptDataBrojKrevetaHint">Broj kreveta</string>
+  <string name="aptDataBrojSoba">Broj soba: </string>
+  <string name="aptDataBrojSobaHint">Broj soba</string>
+  <string name="aptDataBrojOsoba">Broj Osoba: </string>
+  <string name="aptDataBrojOsobaHint">Broj osoba</string>
+  <string name="aptDataOpis">Opis: </string>
+  <string name="aptDataOpisHint">Opis</string>
+  <string name="aptDataWiFi">Wi-Fi: </string>
+  <string name="aptDataKlima">Klima: </string>
+  <string name="aptDataTv">TV: </string>
+  <string name="aptDataParking">Parking: </string>
+  <string name="aptDatacijena">Cijena mjesečno:</string>
+  <string name="aptDatacijenaHint">kn</string>
+  <string name="aptDataKontakt">Kontakt: </string>
+  <string name="aptDataKontaktHint">Kontakt broj</string>
+  <string name="aptDataSlike">Slika: </string>
+  <string name="aptDataPrenesi">Odaberi</string>
+  <string name="aptDataSpremi">Spremi</string>
+  <string name="aptDataIzbrisi">Izbriši oglas</string>
+  <string name="aptDataOdustani">Odustani</string>
+
+  <string name="regEmailHint">Unesite vaš email</string>
+  <string name="regPassHint">Unesite vašu lozinku</string>
+  <string name="regPassSignInHint">Unesite željenu lozinku</string>
+  <string name="regBtnLogin">Prijava</string>
+  <string name="regBtnRegister">Stvori račun</string>
+  <string name="regBtnForgot">Pošalji</string>
+  <string name="regBack">Nazad</string>
+  <string name="regNewAcc">STVORI NOVI RAČUN</string>
+  <string name="regHaveAcc">VEĆ IMATE RAČUN? PRIJAVITE SE!</string>
+  <string name="regForgotPass">Zaboravljena lozinka</string>
+  <string name="regForgotText">Unesite registriranu email adresu i poslat ćemo vam upute za resetiranje lozinke.</string>
+  <string name="regSignUpText">Za stvaranje novog računa unesite valjanu email adresu i željenu lozinku. </string>
+</resources>

@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:wheel="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/material_dark_background"
+  >
+<android.support.design.widget.CoordinatorLayout 
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/activity_addaptdata">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/addAptData_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/addAptData_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+    </android.support.design.widget.AppBarLayout>
+<!--Sve-->
+    <ScrollView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp">
+        <!--Ime-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:weightSum="100">
+                <TextView
+                    android:text="@string/aptDataIme"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="30" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70">
+                    <EditText
+                        android:id="@+id/addAptData_ime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/aptDataImeHint" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:weightSum="100">
+                <TextView
+                    android:text="@string/aptDataGrad"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:layout_weight="30" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70">
+                    <EditText
+                        android:id="@+id/addAptData_grad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/aptDataGradHint" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:weightSum="100">
+                <Button
+                    android:id="@+id/set_location"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:theme="@style/ButtonStyle"
+                    android:text="POSTAVI LOKACIJU" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:weightSum="100">
+                <TextView
+                    android:text="@string/aptDataAdresa"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:layout_weight="30" />
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/button_blue"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:layout_weight="70"
+                    android:id="@+id/adress_selected" />
+            </LinearLayout>
+        <!--Broj kreveta-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:weightSum="100">
+                <TextView
+                    android:text="@string/aptDataBrojKreveta"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:layout_weight="30" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70">
+                    <EditText
+                        android:id="@+id/addAptData_brojKreveta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/aptDataBrojKrevetaHint" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        <!--Broj soba-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:weightSum="100">
+                <TextView
+                    android:text="@string/aptDataBrojSoba"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:textSize="16sp"
+                    android:layout_weight="30" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70">
+                    <EditText
+                        android:id="@+id/addAptData_brojSoba"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/aptDataBrojSobaHint" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+          <!--Broj osoba-->
+          <LinearLayout
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="4dp"
+              android:layout_marginBottom="4dp"
+              android:weightSum="100">
+            <TextView
+                android:text="@string/aptDataBrojOsoba"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="0dp"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:textColor="#FFF"
+                android:textSize="16sp"
+                android:layout_weight="30" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="70">
+              <EditText
+                  android:id="@+id/addAptData_brojOsoba"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:inputType="number"
+                  android:hint="@string/aptDataBrojOsobaHint" />
+            </android.support.design.widget.TextInputLayout>
+          </LinearLayout>
+        <!--Opis-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:weightSum="100">
+                <TextView
+                    android:text="@string/aptDataOpis"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:textSize="16sp"
+                    android:layout_weight="30" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70">
+                    <EditText
+                        android:id="@+id/addAptData_opis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="2048"
+                        android:hint="@string/aptDataOpisHint" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        <!--Wi-Fi + Klima-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:weightSum="1.0">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:weightSum="1.0">
+                    <TextView
+                        android:text="@string/aptDataWiFi"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFF"
+                        android:textSize="16sp" />
+                    <CheckBox
+                        android:id="@+id/addAptData_wifi"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="@string/aptDataKlima"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFF"
+                        android:textSize="16sp" />
+                    <CheckBox
+                        android:id="@+id/addAptData_klima"
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+        <!--TV + Parking-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:weightSum="1.0">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="@string/aptDataTv"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFF"
+                        android:gravity="center_vertical"
+                        android:textSize="16sp" />
+                    <CheckBox
+                        android:id="@+id/addAptData_tv"
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:weightSum="100">
+                    <TextView
+                        android:text="@string/aptDataParking"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFF"
+                        android:textSize="16sp" />
+                    <CheckBox
+                        android:id="@+id/addAptData_parking"
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+        <!--Cijena po danu-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+                    android:text="@string/aptDatacijena"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:textColor="#FFF"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70">
+                    <EditText
+                        android:id="@+id/addAptDataCijena"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:hint="@string/aptDatacijenaHint" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        <!--Kontakt-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:weightSum="100">
+                <TextView
+                    android:text="@string/aptDataKontakt"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="30" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70">
+                    <EditText
+                        android:id="@+id/addAptData_kontakt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/aptDataKontaktHint" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        <!--Slike-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:text="@string/aptDataSlike"
+                    android:textSize="16sp"
+                    android:textColor="#FFF"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="70"
+                    android:text="@string/aptDataPrenesi"
+                    android:theme="@style/ButtonStyle"
+                    android:id="@+id/aptDataPrenesi_button"
+                    android:textAlignment="center" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+                <ImageView
+                    android:id="@+id/img_upload"
+                    android:layout_height="150dp"
+                    android:layout_width="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        <!--Spremi + Odustani-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:id="@+id/aptDataSpremi_button"
+                    android:text="@string/aptDataSpremi"
+                    android:theme="@style/ButtonStyle" />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/aptDataOdustani_button"
+                    android:text="@string/aptDataOdustani"
+                   android:theme="@style/ButtonStyle" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>
+  <LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+  <ProgressBar
+          android:id="@+id/progress_bar_addaptdata"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_centerVertical="true"
+          android:visibility="invisible" />
+  <TextView
+          android:id="@+id/progress_text"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:layout_gravity="center"
+          android:textColor="@color/base"
+          android:textSize="16dp"
+          android:visibility="invisible"
+    />
+  </LinearLayout>
+</RelativeLayout>
